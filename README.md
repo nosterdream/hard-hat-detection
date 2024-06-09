@@ -1,5 +1,9 @@
+![GitHub User's stars](https://img.shields.io/github/stars/:nosterdream/:hard-hat-detection)
+![GitHub forks](https://img.shields.io/github/forks/:nosterdream/:hard-hat-detection)
 
 # Hard hat Detection
+![hardhat_output_picture_2](https://github.com/nosterdream/hard-hat-detection/assets/134122257/2a23c771-31aa-4ff8-804e-cea24641e695)
+
 ## Overview
 
 This project focuses on detecting hard hats on individuals in images and videos. Leveraging the power of the YOLOv8 model, the system is capable of identifying people and determining if they are wearing hard hats. The output is an annotated image or video where detected people and hard hats are highlighted with bounding boxes. If a person is wearing a hard hat, the bounding box around them will be green, otherwise, it will be red.
@@ -34,7 +38,7 @@ To run this project, you need to have Python 3.8+ installed. Follow these steps 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/nosterdream/hardhat-detection.git
+    git clone https://github.com/nosterdream/hard-hat-detection.git
     cd hardhat-detection
     ```
 
