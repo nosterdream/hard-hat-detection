@@ -2,7 +2,8 @@
 ![GitHub forks](https://img.shields.io/github/forks/nosterdream/hard-hat-detection)
 
 # Hard hat Detection
-![hardhat_output_picture_2](https://github.com/nosterdream/hard-hat-detection/assets/134122257/2a23c771-31aa-4ff8-804e-cea24641e695)
+![hardhat_video](https://github.com/nosterdream/hard-hat-detection/assets/134122257/9228d43d-d741-45c7-a68d-7ea2ae6e63dc)
+
 
 ## Overview
 
