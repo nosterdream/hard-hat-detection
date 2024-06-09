@@ -1,5 +1,5 @@
-![GitHub User's stars](https://img.shields.io/github/stars/:nosterdream/:hard-hat-detection)
-![GitHub forks](https://img.shields.io/github/forks/:nosterdream/:hard-hat-detection)
+![GitHub User's stars](https://img.shields.io/github/stars/nosterdream/hard-hat-detection)
+![GitHub forks](https://img.shields.io/github/forks/nosterdream/hard-hat-detection)
 
 # Hard hat Detection
 ![hardhat_output_picture_2](https://github.com/nosterdream/hard-hat-detection/assets/134122257/2a23c771-31aa-4ff8-804e-cea24641e695)
