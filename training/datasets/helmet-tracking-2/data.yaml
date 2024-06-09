@@ -1,0 +1,12 @@
+names:
+- helmet
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: helmet-tracking
+  url: https://universe.roboflow.com/street-hazard-wquul/helmet-tracking/dataset/2
+  version: 2
+  workspace: street-hazard-wquul
+test: ../test/images
+train: helmet-tracking-2/train/images
+val: helmet-tracking-2/valid/images
