@@ -9,6 +9,10 @@
 
 This project focuses on detecting hard hats on individuals in images and videos. Leveraging the power of the YOLOv8 model, the system is capable of identifying people and determining if they are wearing hard hats. The output is an annotated image or video where detected people and hard hats are highlighted with bounding boxes. If a person is wearing a hard hat, the bounding box around them will be green, otherwise, it will be red.
 
+You can find models from the link: https://drive.google.com/drive/folders/1E6vjbpqiOCytXphIZB0OnvG45-WvTkH7?usp=sharing. 
+The model last_hardhat_200_epochs.pt have to be in the directory root\models and yolov8x.pt in the root directory.
+
+
 ## Table of Contents
 
 - [Requirements](#requirements)
@@ -24,7 +28,7 @@ This project focuses on detecting hard hats on individuals in images and videos.
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.11
 - Ultralytics 8.2.21
 - OpenCV 4.9.0.80
 - Torch 2.3.0+cu121
