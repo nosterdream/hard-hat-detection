@@ -12,6 +12,8 @@ This project focuses on detecting hard hats on individuals in images and videos.
 You can find models from the [link](https://drive.google.com/drive/folders/1E6vjbpqiOCytXphIZB0OnvG45-WvTkH7?usp=sharing). 
 The model last_hardhat_200_epochs.pt have to be in the directory root\models and yolov8x.pt in the root directory.
 
+I've created new version of hard hat detection model with YOLO11. You can check it [here](https://github.com/nosterdream/hard-hat-detection-2).
+
 
 ## Table of Contents
 
