@@ -9,10 +9,10 @@
 
 This project focuses on detecting hard hats on individuals in images and videos. Leveraging the power of the YOLOv8 model, the system is capable of identifying people and determining if they are wearing hard hats. The output is an annotated image or video where detected people and hard hats are highlighted with bounding boxes. If a person is wearing a hard hat, the bounding box around them will be green, otherwise, it will be red.
 
-You can find models from the [link](https://drive.google.com/drive/folders/1E6vjbpqiOCytXphIZB0OnvG45-WvTkH7?usp=sharing). 
-The model last_hardhat_200_epochs.pt have to be in the directory root\models and yolov8x.pt in the root directory.
+You can find models from the [link](https://drive.google.com/drive/folders/1E6vjbpqiOCytXphIZB0OnvG45-WvTkH7?usp=sharing) or [second link](https://disk.yandex.ru/d/sl3SKtfWeCz5rg). 
+Both models (last_hardhat_200_epochs.pt and yolo8x.pt) have to be in the directory .\models.  
 
-I've created new version of hard hat detection model with YOLO11. You can check it [here](https://github.com/nosterdream/hard-hat-detection-2).
+I've created <u>new version of hard hat detection model with YOLO11</u>. You can check it [here](https://github.com/nosterdream/hard-hat-detection-2).
 
 
 ## Table of Contents
@@ -36,12 +36,12 @@ I've created new version of hard hat detection model with YOLO11. You can check 
 - Torch 2.3.0+cu121
 - Torchvision 0.18.0+cu121
 - Roboflow 1.1.30
-- Pandas
-- Jupyter Notebook
+- Pandas 2.2.2
+- Jupyter Notebook (optional for training)
 
 ## Installation
 
-To run this project, you need to have Python 3.8+ installed. Follow these steps to set up the environment:
+To run this project, you need to have Python 3.11 installed. Follow these steps to set up the environment:
 
 1. Clone the repository:
     ```bash
@@ -51,13 +51,18 @@ To run this project, you need to have Python 3.8+ installed. Follow these steps 
 
 2. Create and activate a virtual environment:
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    python -m venv .venv
+    source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
     ```
 
 3. Install the required packages:
     ```bash
     pip install -r requirements.txt
+    ```
+
+4. Install PyTorch and TorchVision with CUDA separately from requirements.txt:
+    ```bash
+    pip3 install torch==2.3.0 torchvision==0.18.0 --index-url https://download.pytorch.org/whl/cu121
     ```
 
 ## Usage
@@ -66,7 +71,7 @@ First, you need to get an instance of `HardhatTracker` specifying the model path
 ```Python
 from trackers import HardhatTracker
 
-hardhat_tracker = HardhatTracker(model_path='models/last_hardhat_200_epochs.pt')
+hardhat_tracker = HardhatTracker(model_path='hard-hat-detection/models/last_hardhat_200_epochs.pt')
 ```
 
 ### Image Input
@@ -77,8 +82,8 @@ To read the image, you have to specify `input_picture_path` and `output_picture_
 from utils import read_picture
 
 # Input Reading
-input_picture_path = 'input_files/hardhat_input_picture_1.jpg'
-output_picture_path = 'output_files/hardhat_output_picture_1.jpg'
+input_picture_path = 'hard-hat-detection/input_files/hardhat_input_picture_1.jpg'
+output_picture_path = 'hard-hat-detection/output_files/hardhat_output_picture_1.jpg'
 picture = read_picture(input_picture_path)
 ```
 
@@ -106,8 +111,8 @@ To read the video, you have to specify `input_video_path` and `output_video_path
 from utils import read_video
 
 # Input Reading
-input_video_path = 'input_files/hardhat_input_video.avi'
-output_video_path = 'output_files/hardhat_output_video.avi'
+input_video_path = 'hard-hat-detection/input_files/hardhat_input_video.avi'
+output_video_path = 'hard-hat-detection/output_files/hardhat_output_video.avi'
 video = read_video(input_video_path)
 ```
 
@@ -171,7 +176,7 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a Pull Request.
 
@@ -182,9 +187,3 @@ Model was trained on hard hat dataset from Roboflow: https://universe.roboflow.c
 ## License
 
 This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for details.
-
----
-
-For any questions or issues, please open an issue on GitHub or contact the project maintainer at novoselov.g.v@mail.ru.
-
----
